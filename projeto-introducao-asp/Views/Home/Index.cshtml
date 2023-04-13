@@ -1,0 +1,44 @@
+﻿@model projeto_introducao_asp.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Curso de ASP MVC</h2>
+<p>Curso com Hugo Vasconcelos</p>
+
+<br />
+<br />
+
+<p>View tipada</p>
+
+    @using(Html.BeginForm("Lista", "Home", FormMethod.Post)){
+    <fieldset>
+        <legend>Informações de Pessoas</legend>
+    
+
+    <div>
+        @Html.LabelFor(x => x.PessoaId)
+    </div>
+    <div>
+        @Html.EditorFor(x => x.PessoaId)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Nome)
+    </div>
+    <div>
+         @Html.EditorFor(x => x.Nome)
+    </div>
+
+
+    <div>
+       @Html.LabelFor(x => x.Tipo)
+    </div>
+    <div>
+         @Html.EditorFor(x => x.Tipo)
+    </div>
+
+    <input type="submit" value="Enviar"/>
+    </fieldset>
+    }
